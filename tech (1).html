@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AstraAI | Next-Gen Artificial Intelligence</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #0b0f19;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #060911;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    .logo {
+      font-size: 26px;
+      color: #ffffff;
+    }
+
+    .logo span {
+      color: #a855f7;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: #a855f7;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 75px 20px;
+      text-align: center;
+      background-color: #0b0f19;
+    }
+
+    .hero-content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      background-color: #3b0764;
+      color: #d8b4fe;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin: 16px 0;
+      color: #ffffff;
+    }
+
+    .hero p {
+      color: #94a3b8;
+      font-size: 18px;
+      margin-bottom: 28px;
+    }
+
+    .hero-btns {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .primary-btn {
+      background-color: #9333ea;
+      color: #ffffff;
+    }
+
+    .outline-btn {
+      border: 2px solid #9333ea;
+      color: #d8b4fe;
+      background-color: transparent;
+    }
+
+    /* Sections */
+    .section {
+      padding: 60px 20px;
+    }
+
+    .dark-alt {
+      background-color: #111827;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 36px;
+      color: #ffffff;
+    }
+
+    /* Flex Layout */
+    .flex-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    /* Product Cards */
+    .card {
+      background-color: #1e293b;
+      width: 320px;
+      padding: 24px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      border-top: 4px solid #a855f7;
+    }
+
+    .card h3 {
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      margin-bottom: 14px;
+    }
+
+    .feature-list {
+      list-style: disc;
+      padding-left: 20px;
+      color: #d8b4fe;
+      font-size: 14px;
+    }
+
+    /* Applications */
+    .app-box {
+      background-color: #1e293b;
+      width: 240px;
+      padding: 22px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+    }
+
+    .app-box h3 {
+      color: #a855f7;
+      margin-bottom: 8px;
+    }
+
+    /* Technology Box */
+    .tech-box {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #1e293b;
+      padding: 28px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      text-align: center;
+      font-size: 17px;
+      color: #cbd5e1;
+    }
+
+    /* Team */
+    .team-card {
+      background-color: #1e293b;
+      width: 300px;
+      padding: 24px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      text-align: center;
+    }
+
+    .team-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #a855f7;
+      margin-bottom: 12px;
+    }
+
+    .team-card h3 {
+      color: #ffffff;
+    }
+
+    .role {
+      color: #d8b4fe;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .bio {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #334155;
+      background-color: #1e293b;
+      color: #ffffff;
+      font-size: 15px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #060911;
+      color: #64748b;
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #1e293b;
+    }
+
+    /* Media Queries */
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <h2 class="logo">Astra<span>AI</span></h2>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#applications">Applications</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="badge">ENTERPRISE AI PLATFORM</span>
+      <h1>Building Intelligent Systems for Tomorrow</h1>
+      <p>AstraAI empowers businesses with fast, secure, and scalable machine learning models for automation, analytics, and natural language processing.</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn primary-btn">Explore AI Products</a>
+        <a href="#contact" class="btn outline-btn">Request Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Products & Features Section -->
+  <section id="products" class="section dark-alt">
+    <h2 class="section-title">Our AI Products</h2>
+    <div class="flex-container">
+      <div class="card">
+        <h3>AstraChat Pro</h3>
+        <p>Conversational AI assistant trained on domain-specific data for instant customer support.</p>
+        <ul class="feature-list">
+          <li>24/7 Support</li>
+          <li>99.9% Query Accuracy</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>VisionSense AI</h3>
+        <p>Real-time computer vision API for defect detection, security monitoring, and medical imaging.</p>
+        <ul class="feature-list">
+          <li>60 FPS Video Processing</li>
+          <li>Edge Device Ready</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>DataPulse Predict</h3>
+        <p>Predictive analytics engine that forecasts market demand and detects financial anomalies.</p>
+        <ul class="feature-list">
+          <li>Automated Dashboards</li>
+          <li>Zero-Code Integration</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications Section -->
+  <section id="applications" class="section">
+    <h2 class="section-title">Industry Applications</h2>
+    <div class="flex-container">
+      <div class="app-box">
+        <h3>Healthcare</h3>
+        <p>Early disease detection and automated patient report summarization.</p>
+      </div>
+      <div class="app-box">
+        <h3>FinTech</h3>
+        <p>Real-time fraud prevention and automated credit risk scoring.</p>
+      </div>
+      <div class="app-box">
+        <h3>Smart Manufacturing</h3>
+        <p>Predictive machinery maintenance and automated quality inspection.</p>
+      </div>
+      <div class="app-box">
+        <h3>Education</h3>
+        <p>Personalized AI tutors adapting to every student's learning pace.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Information Section -->
+  <section id="technology" class="section dark-alt">
+    <h2 class="section-title">Core AI Technology</h2>
+    <div class="tech-box">
+      <p>Our infrastructure combines <strong>Transformer Neural Networks</strong>, <strong>Federated Learning</strong>, and <strong>Low-Latency Cloud Inference</strong>. All customer data is encrypted end-to-end, ensuring strict privacy compliance while delivering responses in under 120 milliseconds.</p>
+    </div>
+  </section>
+
+  <!-- Team Members Section -->
+  <section id="team" class="section">
+    <h2 class="section-title">Leadership Team</h2>
+    <div class="flex-container">
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="CEO Photo">
+        <h3>Arjun Mehta</h3>
+        <p class="role">Founder &amp; CEO</p>
+        <p class="bio">Former AI Research Lead with 10+ years in deep learning systems.</p>
+      </div>
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="CTO Photo">
+        <h3>Dr. Sneha Rao</h3>
+        <p class="role">Chief Technology Officer</p>
+        <p class="bio">PhD in Natural Language Processing and scalable neural architectures.</p>
+      </div>
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80" alt="Head of Product Photo">
+        <h3>Vikram Desai</h3>
+        <p class="role">Head of AI Product</p>
+        <p class="bio">Specializes in deploying enterprise cloud AI solutions globally.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section dark-alt">
+    <h2 class="section-title">Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Work Email" required>
+      <textarea rows="4" placeholder="Tell us about your AI project..." required></textarea>
+      <button type="submit" class="btn primary-btn">Submit Inquiry</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 AstraAI Technologies Pvt. Ltd. | Hyderabad, India</p>
+  </footer>
+
+</body>
+</html>
